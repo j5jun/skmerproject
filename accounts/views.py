@@ -16,4 +16,11 @@ class CreatePostView(CreateView): # new
     model = upload
     form_class = uploadForm
     template_name = 'upload.html'
+    success_url = reverse_lazy('results')
+
+
+class ResultView(CreateView):  # new
+    model = upload
+    form_class = uploadForm
+    template_name = 'results.html'
     success_url = reverse_lazy('home')
