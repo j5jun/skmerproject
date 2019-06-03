@@ -4,10 +4,13 @@
 
 {% block content %}
   <h2>Upload your .fasta file here</h2>
-  <form method="upload" enctype="multipart/form-data">
+  <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Submit query</button>
   </form>
-     <p><a href="{% url 'home' %}">home</a></p>
+
+    <form method="GET" action="{% url 'home' %}">
+        <button type="submit">HOME</button>
+    </form>
 {% endblock %}
