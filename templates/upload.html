@@ -3,14 +3,17 @@
 {% block title %}Sign Up{% endblock %}
 
 {% block content %}
+  <center>
   <h2>Upload your .fasta file here</h2>
+  <div>
+  	<center>Skim Your Genome takes as input one of the two forms:</center>
+  	<p>(1) Text: Manually enter the sequence</p>
+  	<p>(2) File: Upload the .fasta file</p>
+  </div>
   <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Submit query</button>
+    <button type="submit">Submit</button>
   </form>
-
-    <form method="GET" action="{% url 'home' %}">
-        <button type="submit">HOME</button>
-    </form>
+  </center>
 {% endblock %}

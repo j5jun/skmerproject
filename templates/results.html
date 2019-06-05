@@ -3,12 +3,11 @@
 {% block title %}Sign Up{% endblock %}
 
 {% block content %}
-  <h2>Your query result has been loaded!</h2>
+  <center><h2>Your query result has been loaded!</h2></center>
     <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
   </form>
-     <p><a href="{% url 'home' %}">home</a></p>
 {% endblock %}
 {% comment %}
 

@@ -1,10 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style>
+	body {background-color: #A4BBFF;}
+	
+	.intro {
+		text-align: left;
+		color: black;
+		background-color: #D7E1FF;
+
+	}
+
+	p.welcome {
+		font-size:25px;
+	}
+
+	div {
+  		width: 45%;
+  		padding: 10px;
+  		border: 3px solid gray;
+  		text-align: left;
+  		background-color:#D7E1FF;
+	}
+
+	a { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none; }
+
+	sep { 	
+  		padding: 5px;
+  		margin: 5;
+	}
+
+	header {
+		width: 100%;
+		border: none;
+		padding: 10px;
+		text-align: center;
+		background-color: #7B9CFF;
+	}
+
+	</style>
   <meta charset="utf-8">
   <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
 </head>
 <body>
+	<header><h1><a href="{% url 'home' %}"> Skim Your Genome</a></h1></header>
   <main>
     {% block content %}
     {% endblock %}

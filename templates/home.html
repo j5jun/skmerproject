@@ -1,16 +1,42 @@
 {% extends 'base.html' %}
 
 {% block title %}Home{% endblock %}
-
 {% block content %}
+
+
 {% if user.is_authenticated %}
-  Hi {{ user.username }}!
-  <p><a href="{% url 'logout' %}">logout</a></p>
-  <p><a href="{% url 'password_reset' %}">reset password</a></p>
-  <p><a href="{% url 'upload' %}">upload your query here</a></p>
+  
+  <center><p class="welcome">Welcome, {{ user.username }}!</p></center>
+	<center><div><p class="intro">Skmer is a fast tool for estimating distances between genomes from low-coverage sequencing reads (genome-skims), without needing any assembly or alignment step. The paper where we have described the methods and tested Skmer on simulated short reads and SRA's from previous sequencing experiments is available online (open access):</p><center><a href=https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1632-4>Access the paper here</a></center></div></center>
+
+  <sep></sep>
+  <center>
+  <form method="GET" action="{% url 'upload' %}">
+        <button type="submit">Upload My Query</button>
+  </form>
+  <sep></sep>
+  <form method="GET" action="{% url 'logout' %}">
+        <button type="submit">Logout</button>
+  </form>
+  <form method="GET" action="{% url 'password_reset' %}">
+        <button type="submit">Reset Password</button>
+  </form>
+  </center>
 
 {% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">login</a>
+<sep></sep>
+<center><div><p class="intro">Skmer is a fast tool for estimating distances between genomes from low-coverage sequencing reads (genome-skims), without needing any assembly or alignment step. The paper where we have described the methods and tested Skmer on simulated short reads and SRA's from previous sequencing experiments is available online (open access):</p><center><a href=https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1632-4>Access the paper here</a></center></div></center>
+
+  <sep></sep>
+  <center>You are not logged in. To use the online version, please log in to your account.</center>
+
+  <center>
+  <form method="GET" action="{% url 'login' %}">
+        <button type="submit">Login</button>
+  </form>
+  <form method="GET" action="{% url 'signup' %}">
+        <button type="submit">Sign Up</button>
+  </form>
+  </center>
 {% endif %}
 {% endblock %}
