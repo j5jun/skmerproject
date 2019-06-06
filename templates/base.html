@@ -15,6 +15,12 @@
 		font-size:25px;
 	}
 
+	p.github {
+		width: 120px;
+		padding: 5px;
+		background-color: white;
+	}
+
 	div {
   		width: 45%;
   		padding: 10px;
@@ -44,10 +50,11 @@ a:hover, a:active { text-decoration: none; }
 
 	</style>
   <meta charset="utf-8">
-  <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
+  <title>Skmer on Web</title>
 </head>
 <body>
-	<header><h1><a href="{% url 'home' %}"> Skim Your Genome</a></h1></header>
+	<header><h1><a href="{% url 'home' %}">Skim Your Genome</a></h1>
+		<center><p class="github"><a href="https://github.com/shahab-sarmashghi/Skmer">Skmer GitHub</a></p></center></header>
   <main>
     {% block content %}
     {% endblock %}

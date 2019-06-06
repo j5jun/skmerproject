@@ -1,15 +1,11 @@
 {% extends 'base.html' %}
 
-{% block title %}Sign Up{% endblock %}
+{% block title %}Skmer on Web{% endblock %}
 
 {% block content %}
   <center>
   <h2>Upload your .fasta file here</h2>
-  <div>
-  	<center>Skim Your Genome takes as input one of the two forms:</center>
-  	<p>(1) Text: Manually enter the sequence</p>
-  	<p>(2) File: Upload the .fasta file</p>
-  </div>
+  <div><center>Skim Your Genome takes a query file in <b>.fastq</b> format.</center></div>
   <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}

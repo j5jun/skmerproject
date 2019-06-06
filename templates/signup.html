@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head><style>
-	body {background-color: #A4BBFF;}</style></head>
+	body {background-color: #A4BBFF;}
+	header {
+		width: 100%;
+		border: none;
+		padding: 10px;
+		text-align: center;
+		background-color: #7B9CFF;
+	}</style>
+	<title>Skmer on Web</title>
+</head>
 	<body>
+		<header><h1><a href="{% url 'home' %}"> Skim Your Genome</a></h1>
+		<center><p class="github"><a href="https://github.com/shahab-sarmashghi/Skmer">Skmer GitHub</a></p></center></header>
 <main>
 {% block content %}
   <h2>Sign up</h2>

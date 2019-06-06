@@ -7,7 +7,7 @@ class uploadForm(forms.ModelForm):
 
     class Meta:
         model = upload
-        fields = ['uploadText', 'upload']
+        fields = ['upload']
 
 
 class resultsForm(forms.ModelForm):
